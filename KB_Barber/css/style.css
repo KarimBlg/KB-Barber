@@ -1,0 +1,572 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #f1f1f1;
+}
+
+/* -------- Navigation -------- */
+
+nav {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 70px;
+    background: transparent;
+    transition: background-color 0.3s ease-in-out,
+        border-bottom 0.3s ease-in-out;
+}
+
+nav.anim-nav {
+    background: #000;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+nav ul {
+    width: 100%;
+    height: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav li {
+    margin: 0 12px;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+
+@media screen and (max-width: 550px) {
+    nav li {
+        margin: 0 8px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+}
+
+/* ---------- Accueil fondu -------- */
+
+.accueil {
+    height: 800px;
+    display: flex;
+    overflow: hidden;
+
+}
+
+.bloc-gauche-accueil {
+    position: relative;
+    width: 40%;
+    height: 100%;
+    background: #000;
+    box-shadow: 90px 0 100px 100px #000;
+}
+
+h1 {
+    color: #f1f1f1;
+    font-family: Playfair display;
+    font-size: 5.5vw;
+    padding-top: 200px;
+    padding-bottom: 20px;
+    margin-left: 5vw;
+    white-space: nowrap;
+}
+
+.accueil p {
+    color: #f1f1f1;
+    font-size: 30px;
+    width: 600px;
+    margin-left: 5vw;
+    line-height: 1.3;
+}
+
+.cont-btn-home {
+    display: flex;
+}
+
+.btn-accueil {
+    font-size: 18px;
+    text-align: center;
+    color: #f1f1f1;
+    padding: 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 40px;
+    border: 1px solid #f1f1f1;
+    width: 150px;
+    cursor: pointer;
+}
+
+.btn-accueil:hover {
+    transition: all 0.2s ease-in-out;
+    color: #000;
+    background: #f1f1f1;
+}
+
+.b1 {
+    margin-left: 5vw;
+}
+
+.b2 {
+    margin-left: 10px;
+}
+
+.bloc-droit-accueil {
+    background-image: url('../assets/images/accueil.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 90%;
+    height: 100%;
+
+}
+
+@media screen and (max-width: 1165px) {
+
+    .bloc-droit-accueil {
+        background-position: 68% 5%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+
+    h1 {
+        margin-bottom: 20px;
+    }
+
+    .accueil p {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .btn-accueil {
+        font-size: 18px;
+        padding: 12px;
+        margin-top: 20px;
+    }
+
+    .bloc-gauche-accueil {
+        width: 35%;
+        box-shadow: 90px 0 50px 30px #000;
+    }
+
+    .bloc-droit-accueil {
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 575px) {
+
+    .accueil {
+        height: 450px;
+
+    }
+
+    h1 {
+        font-size: 23px;
+    }
+
+    .accueil p {
+        font-size: 17px;
+        margin-bottom: 15px;
+    }
+
+    .btn-accueil {
+        font-size: 15px;
+        padding: 6px;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    .bloc-droit-accueil {
+        background-repeat: no-repeat;
+        background-position: bottom;
+    }
+}
+
+/* ---------- Section Services -------- */
+
+.titre-section-services {
+    color: #000;
+    text-align: center;
+    font-size: 65px;
+    padding: 50px 20px 120px;
+
+}
+
+.services {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+    background: #f1f1f1;
+    position: relative;
+
+}
+
+.carte-service {
+    width: 350px;
+    height: auto;
+    margin: 0 20px 80px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    position: relative;
+    z-index: 100;
+}
+
+.container-photo-service img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.carte-service h2 {
+    color: #333;
+    text-align: center;
+    font-size: 25px;
+    padding: 20px 5px;
+}
+
+.carte-service p {
+    color: #333;
+    text-align: center;
+    font-size: 23px;
+    padding: 0 5px 15px;
+}
+
+.deco-infos {
+    position: absolute;
+    z-index: -1;
+    top: -70px;
+    left: -100px;
+}
+
+@media screen and (max-width: 1400px) {
+    .deco-infos {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .titre-section-services {
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .titre-section-services {
+        font-size: 32px;
+        padding: 40px 20px 40px;
+    }
+
+    .carte-service {
+        margin: 0 10px 45px;
+    }
+}
+
+/* section avis */
+
+#comment {
+    background: rgb(222, 219, 219);
+}
+
+.h1-space {
+    color: #000;
+    text-align: center;
+    font-size: 65px;
+    padding: 50px 20px 70px;
+    margin-right: 130px;
+}
+
+.block {
+    margin: 20px 80px 20px 200px;
+}
+
+.avis {
+    display: flex;
+    text-align: center;
+}
+
+#name {
+    font-family: Avenir-Medium;
+    font-size: 1.375rem;
+    margin: 0;
+}
+
+#star {
+    margin-left: 40px;
+}
+
+.avis img {
+    margin-right: 4px;
+}
+
+.comment {
+    font-family: Avenir-Book;
+    font-size: 1.125rem;
+    line-height: 30px;
+    height: 115px;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    margin-top: -5px;
+    padding-bottom: 80px;
+}
+
+.carousel-button {
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+/* ---------Section galerie------------ */
+
+.titre-galerie {
+    text-align: center;
+    font-size: 70px;
+    color: black;
+    padding: 50px 0;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#galerie {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1300px;
+    min-width: 300px;
+    margin: 0 auto 100px;
+}
+
+.btn-modale {
+    width: 350px;
+    height: 400px;
+    border: none;
+    margin: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.btn-modale:nth-child(1) {
+    background-image: url(../assets/images/galerie-1.jpg);
+}
+
+.btn-modale:nth-child(2) {
+    background-image: url(../assets/images/galerie-2.jpg);
+}
+
+.btn-modale:nth-child(3) {
+    background-image: url(../assets/images/galerie-3.jpeg);
+}
+
+.btn-modale:nth-child(4) {
+    background-image: url(../assets/images/galerie-4.jpg);
+}
+
+.btn-modale:nth-child(5) {
+    background-image: url(../assets/images/galerie-5.jpg);
+}
+
+.btn-modale:nth-child(6) {
+    background-image: url(../assets/images/galerie-6.jpg);
+}
+
+.btn-modale:nth-child(7) {
+    background-image: url(../assets/images/galerie-7.jpeg);
+}
+
+.btn-modale:nth-child(8) {
+    background-image: url(../assets/images/galerie-8.jpg);
+}
+
+.btn-modale:nth-child(9) {
+    background-image: url(../assets/images/galerie-9.jpg);
+}
+
+.bloc-modale {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 100;
+    display: none;
+}
+
+.active-modale {
+    display: block;
+}
+
+.bloc-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 500px;
+}
+
+.bloc-modale img {
+    width: 100%;
+}
+
+.fermeture-modale {
+    position: absolute;
+    z-index: 400;
+    top: 5%;
+    right: 5%;
+    width: 60px;
+    height: 60px;
+    font-size: 22px;
+    color: white;
+    background: red;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+}
+
+@media screen and (max-width: 850px) {
+    .titre-galerie {
+        font-size: 45px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .titre-galerie {
+        font-size: 35px;
+    }
+}
+
+/* -------- Font -------- */
+
+.parallax {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/images/font.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.parallax-txt {
+    font-size: 70px;
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 550px) {
+    .parallax-txt {
+        font-size: 35px;
+    }
+}
+
+
+/* -------- Contact -------- */
+
+.titre-contact {
+    border-top: 1px dashed #000;
+    text-align: center;
+    font-size: 50px;
+    padding: 50px 0;
+}
+
+form {
+    width: 50%;
+    margin: 0 auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-bottom: 30px;
+    /* position: relative; */
+}
+
+label,
+input {
+    width: 100%;
+    font-size: 20px;
+    margin: 5px 0;
+
+}
+
+form input {
+    padding: 10px 5px;
+}
+
+input:nth-child(4) {
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+    font-size: 20px;
+    padding: 15px;
+}
+
+label:nth-child(5) {
+    margin-bottom: 10px;
+}
+
+.form-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    font-size: 18px;
+    width: 250px;
+    border-radius: 5px;
+    border: 1px solid #333;
+
+}
+
+
+
+footer {
+    text-align: center;
+    padding: 15px 0;
+    border-top: 1px dashed #000;
+}
+
+.coordonnees {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 90px;
+}
+
+.coordonnees p {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
